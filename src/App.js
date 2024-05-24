@@ -5,6 +5,7 @@ import SignUp from './SignUp';
 import SignIn from './SignIn';
 import ConfirmMail from './ConfirmMail';
 import Home from './HomePage';
+import { Navigate } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path="/signin" element={<SignIn/>} />
           <Route path="/ConfirmMail" element={<ConfirmMail/>} />
           <Route path="/home" element={<Home/>} />
+
+          <Route path="*" element={<Navigate to="/signin" />} />
         </Routes>
       </Router>
     </ChakraProvider>
